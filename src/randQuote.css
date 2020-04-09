@@ -6,7 +6,7 @@
 
 body{
     background-color:black;
-    background-image: url('./assets/mb_text_bg.jpg')
+    background-image: url('assets/mb_text_bg.jpg')
 }
 
 #wrapper{
@@ -15,7 +15,6 @@ body{
     height:100vh;
     justify-content:center;
     align-items:center;
-    background-image: url('./assets/mb_text_bg.jpg')
 }
 
 #quote-box{
