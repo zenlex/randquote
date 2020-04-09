@@ -1,6 +1,5 @@
 import React from 'react';
 import './randQuote.css';
-import { Component } from "react"
 import { CSSTransitionGroup }  from 'react-transition-group';
 
 //Random Quote Generator - Free Code Camp Front End Libraries Certification - Project 1
