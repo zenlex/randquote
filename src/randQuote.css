@@ -6,7 +6,7 @@
 
 body{
     background-color:black;
-    background-image: url('/assets/mb_text_bg.jpg')
+    background-image: url('./assets/mb_text_bg.jpg')
 }
 
 #wrapper{
