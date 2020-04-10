@@ -94,3 +94,48 @@ body{
     opacity: 0.01;
     transition: opacity 300ms ease-in;
   }
+
+  @media only screen and (max-width:968px){
+
+    #wrapper{
+        height:150vh;
+    }
+    
+    #quote-box{
+        width: 90%;
+        margin:30px auto;
+        padding:40px;
+        box-shadow:-20px 20px 40px;
+    }
+    
+    .fontDefs{
+        font-size:1em;
+    }
+    
+    #text{
+        font-size: 1.25em;
+    }
+
+    #new-quote{
+        width: 80%;
+        height: 30px;
+        margin: 30px auto 20px;
+        font-size:1.25em;
+    }
+ 
+    .icoButton{
+        width:150px;
+        height:150px;
+        padding:15px;
+        border-radius:20%;
+    }
+    
+    #twitter-logo{
+        height: 70px;
+    }
+    
+    #tweet-quote{
+        font-size: 1em;
+    }
+
+  }
