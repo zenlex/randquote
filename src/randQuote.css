@@ -98,7 +98,7 @@ body{
   @media only screen and (max-width:968px){
 
     #wrapper{
-        height:150vh;
+        height:125vh;
     }
     
     #quote-box{
@@ -113,7 +113,7 @@ body{
     }
     
     #text{
-        font-size: 1.25em;
+        font-size: 1.5em;
     }
 
     #new-quote{
