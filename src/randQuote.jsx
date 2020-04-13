@@ -88,6 +88,7 @@ class QuoteGen extends React.Component{
     
     export default QuoteGen;
 
+//twitter button component
 function TweetIt(props){
     return(
         <div className='icoButton'>
