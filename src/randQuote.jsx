@@ -86,10 +86,16 @@ class QuoteGen extends React.Component {
     }
 }
 
+<<<<<<< HEAD
 export default QuoteGen;
 
 function TweetIt(props) {
     return (
+=======
+//twitter button component
+function TweetIt(props){
+    return(
+>>>>>>> ee7af78d40ffd855d17725e6d8b4ad225b1f5d3d
         <div className='icoButton'>
             <a id='tweet-quote' href=
                 {`https://twitter.com/intent/tweet?text="${String(props.quote)}"%0a-${props.author}`} target="_blank" rel="noopener noreferrer">
