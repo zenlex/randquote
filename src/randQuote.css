@@ -6,7 +6,7 @@
 
 body{
     background-color:black;
-    background-image: url('mb_text_bg.jpg')
+    background-image: url('./images/mb_text_bg.jpg')
 }
 
 #wrapper{
@@ -18,64 +18,73 @@ body{
 }
 
 #quote-box{
-    height:auto;
+    height:80vh;
     width: 80%;
     margin:50px auto;
     background-color:rgb(4, 4, 65, .85);
     border-radius:20px;
     padding:50px;
     box-shadow:-20px 20px 40px;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-around;
 }
 
 .fontDefs{
     font-family:'Shadows Into Light', sans-serif, monospace;
-    font-size:1.75em;
     color:rgb(170, 201, 248);
-    margin:0px 15px 20px 0px;
     text-align:center;
 }
 
 #text{
-    font-size: 2em;
+    font-size: 1.75em;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    height:50%;
+}
+
+#controls{
+  height:50%;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 #new-quote{
     display:block;
     width: 60%;
     height: 40px;
-    margin: 40px auto 30px;
     font-size:1.5em;
-    border-radius:5px;
+    margin: 10px auto;
+    border-radius:10px;
     background-color:rgb(10,10,90);
     border:none;
     box-shadow:10px 10px 10px #000;
-    color:#BBB;
+}
+
+#author{
+  font-size:1.5em;
 }
 
 .icoButton{
     background-color:rgb(0, 60, 128);
-    width:200px;
-    height:200px;
+    width:100px;
+    height:100px;
     display:flex;
-    padding:20px;
+    flex-direction: column;
+    padding:10px 5px;
     align-items:center;
     justify-content:center;
     border-radius:25%;
-    margin:auto;
+    margin:20px auto;
 }
 
 #twitter-logo{
-    margin:10px;
-    height: 100px;
+    height: 50px;
     width: auto;
 }
 
-#tweet-quote{
-    font-size: 1.25em;
-    text-align: center;
-    display:block;
-    color: white;
-}
 
 .fadeboth-enter {
     opacity: 0.01;
@@ -138,5 +147,7 @@ body{
     #tweet-quote{
         font-size: 1em;
     }
+
+
 
   }

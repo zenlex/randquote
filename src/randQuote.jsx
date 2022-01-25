@@ -1,6 +1,7 @@
 import React from 'react';
 import './randQuote.css';
 import { CSSTransitionGroup } from 'react-transition-group';
+import twitterLogo from './images/twitter_bird.png';
 
 //Random Quote Generator - Free Code Camp Front End Libraries Certification - Project 1
 /****************************************************************************************
@@ -56,10 +57,6 @@ class QuoteGen extends React.Component {
         }
     }
 
-    componentDidUpdate() {
-
-    }
-
     clickHandle(event) {
         this.setQuote();
     };
@@ -78,8 +75,10 @@ class QuoteGen extends React.Component {
                     <div id='text' key={this.state.quoteindex} className='fontDefs'>"{this.state.quote}"</div>
                     <div id='author' key={this.state.quoteindex + 1} className='fontDefs'>-{this.state.author}</div>
                 </CSSTransitionGroup>
-                <input id='new-quote' className='fontDefs' type="submit" value="Get New Quote" onClick={this.clickHandle} />
-                <TweetIt quote={encodeURIComponent(this.state.quote)} author={this.state.author} />
+                <div id='controls'>
+                  <input id='new-quote' className='fontDefs' type="submit" value="Get New Quote" onClick={this.clickHandle} />
+                  <TweetIt quote={encodeURIComponent(this.state.quote)} author={this.state.author} />
+                </div>
             </div>
         )
 
@@ -93,7 +92,9 @@ function TweetIt(props) {
         <div className='icoButton'>
             <a id='tweet-quote' href=
                 {`https://twitter.com/intent/tweet?text="${String(props.quote)}"%0a-${props.author}`} target="_blank" rel="noopener noreferrer">
-                <img id="twitter-logo" src="./assets/twitter_bird.png" alt="Twitter Logo"></img>
+                <div className="img-container">
+                <img id="twitter-logo" src={twitterLogo} alt="Twitter Logo"></img>
+                </div>
                 <span className='fontDefs'>Tweet It!</span>
             </a>
         </div>
