@@ -72,13 +72,15 @@ class QuoteGen extends React.Component {
                     transitionLeaveTimeout={0}
                     transitionLeave={false}
                 >
+                  <div id="quote-container">
                     <div id='text' key={this.state.quoteindex} className='fontDefs'>"{this.state.quote}"</div>
                     <div id='author' key={this.state.quoteindex + 1} className='fontDefs'>-{this.state.author}</div>
-                </CSSTransitionGroup>
+                  </div>
                 <div id='controls'>
                   <input id='new-quote' className='fontDefs' type="submit" value="Get New Quote" onClick={this.clickHandle} />
                   <TweetIt quote={encodeURIComponent(this.state.quote)} author={this.state.author} />
                 </div>
+                </CSSTransitionGroup>
             </div>
         )
 
