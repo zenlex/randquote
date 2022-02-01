@@ -39,7 +39,11 @@ body {
 }
 
 #quote-box>span {
-  height: 100%;
+  height: 50%;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 
@@ -49,6 +53,7 @@ body {
   justify-content: center;
   align-items: center;
   height: 50%;
+  flex:0 1;
 }
 
 #controls {
@@ -107,11 +112,13 @@ body {
 
 .fadeboth-enter {
   opacity: 0.01;
+  transform: scale(0);
 }
 
 .fadeboth-enter.fadeboth-enter-active {
   opacity: 1;
-  transition: opacity 500ms ease-in;
+  transform: scale(1);
+  transition: opacity, transform 500ms 300ms ease;
 }
 
 .fadeboth-leave {
@@ -120,5 +127,13 @@ body {
 
 .fadeboth-leave.fadeboth-leave-active {
   opacity: 0.01;
-  transition: opacity 300ms ease-in;
+  transform: scale(0);
+  transition: opacity, transform 300ms ease-in;
+}
+
+
+@media only screen and (min-width:1000px){
+  .fontDefs{
+    font-size:2em;
+  }
 }

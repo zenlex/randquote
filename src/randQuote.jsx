@@ -19,28 +19,42 @@ import twitterLogo from './images/twitter_bird.png';
  * a #tweet-quote element should include href = "twitter.com/intent/tweet"
  * 
  * #quote-box wwrapper should be horizonatally centered
-*****************************************************************************************/
+ *****************************************************************************************/
 
 
 const QAPI = "https://type.fit/api/quotes";
 let quotesArr = [];
 
+const debounce = (callback, delay) => {
+  let timer;
+return (...args) => {
+    clearTimeout(timer);
+    timer = setTimeout(() => callback(...args), delay);
+  }
+}
+
 class QuoteGen extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            quote: '',
-            author: '',
-            quoteindex: 0
-        }
-        this.clickHandle = this.clickHandle.bind(this);
+  constructor(props) {
+    super(props);
+    this.state = {
+      quote: '',
+      author: '',
+      quoteindex: 0
     }
+    this.clickHandle = this.clickHandle.bind(this);
+  }
+
+  debounceQuote = debounce(() => this.setQuote(), 300)
 
     setQuote() {
         /*Pick random index from array of quotes and set state */
 
         let index = Math.floor(Math.random() * quotesArr.length)
-        this.setState({ quote: quotesArr[index].text, author: quotesArr[index].author, quoteindex: index });
+        this.setState({
+           quote: quotesArr[index].text,
+           author: quotesArr[index].author,
+           quoteindex: index 
+          });
         if (quotesArr[index].author === null) {
             this.setState({ author: "Anonymous" });
         }
@@ -58,30 +72,27 @@ class QuoteGen extends React.Component {
     }
 
     clickHandle(event) {
-        this.setQuote();
+      this.debounceQuote()
     };
-
-
 
     render() {
         return (
+          <div id="wrapper">
             <div id='quote-box'>
                 <CSSTransitionGroup
                     transitionName="fadeboth"
-                    transitionEnterTimeout={1000}
+                    transitionEnterTimeout={0}
                     transitionLeaveTimeout={0}
-                    transitionLeave={false}
-                >
-                  <div id="quote-container">
-                    <div id='text' key={this.state.quoteindex} className='fontDefs'>"{this.state.quote}"</div>
-                    <div id='author' key={this.state.quoteindex + 1} className='fontDefs'>-{this.state.author}</div>
-                  </div>
+                    >
+                    <div id='text' key={this.state.quoteindex} className='fontDefs'>{this.state.quote ? `"${this.state.quote}"` : ''}</div>
+                    <div id='author' key={this.state.quoteindex + 1} className='fontDefs'>{this.state.author ? `-${this.state.author}`: ''}</div>
+                </CSSTransitionGroup>
                 <div id='controls'>
                   <input id='new-quote' className='fontDefs' type="submit" value="Get New Quote" onClick={this.clickHandle} />
                   <TweetIt quote={encodeURIComponent(this.state.quote)} author={this.state.author} />
                 </div>
-                </CSSTransitionGroup>
             </div>
+          </div>
         )
 
     }
