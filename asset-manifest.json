@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/randquote/static/css/main.cd56476e.css",
+    "main.css": "/randquote/static/css/main.e27d99c3.css",
     "main.js": "/randquote/static/js/main.f18ed2a6.js",
     "static/media/mb_text_bg.jpg": "/randquote/static/media/mb_text_bg.49e6458a5f2bf1c25685.jpg",
     "static/media/twitter_bird.png": "/randquote/static/media/twitter_bird.ad1b1434e04307933661.png",
     "index.html": "/randquote/index.html",
-    "main.cd56476e.css.map": "/randquote/static/css/main.cd56476e.css.map",
+    "main.e27d99c3.css.map": "/randquote/static/css/main.e27d99c3.css.map",
     "main.f18ed2a6.js.map": "/randquote/static/js/main.f18ed2a6.js.map"
   },
   "entrypoints": [
-    "static/css/main.cd56476e.css",
+    "static/css/main.e27d99c3.css",
     "static/js/main.f18ed2a6.js"
   ]
 }
