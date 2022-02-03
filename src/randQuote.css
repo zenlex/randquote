@@ -39,6 +39,7 @@ body {
   overflow: hidden;
 }
 
+/* auto generated span for CSS Transition */
 #quote-box>span {
   height: 50%;
   display:flex;
@@ -47,7 +48,7 @@ body {
   align-items: center;
 }
 
-
+/* QUOTE AND AUTHOR TEXT */
 #quote-container {
   display: flex;
   flex-direction: column;
@@ -57,6 +58,11 @@ body {
   flex:0 1;
 }
 
+#author {
+  margin:20px;
+}
+
+/* NEW QUOTE AND TWITTER BUTTONS */
 #controls {
   display: flex;
   flex-direction: column;
@@ -78,10 +84,6 @@ body {
 #new-quote:hover {
   background-color: rgb(20, 20, 100);
   box-shadow: 0px 5px 15px #999;
-}
-
-#author {
-  margin: 20px;
 }
 
 .icoButton {
@@ -136,6 +138,7 @@ body {
   transition: opacity, transform 300ms ease-in;
 }
 
+/*INCREASE FONT SIZE ON LARGER SCREENS */
 
 @media only screen and (min-width:800px){
   .fontDefs{
